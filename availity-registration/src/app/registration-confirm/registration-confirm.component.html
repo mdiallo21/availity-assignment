@@ -1,0 +1,53 @@
+<div *ngIf="registrationConfirmation$ | async as confirmation" class="register-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Thank you for your registration!</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <tr>
+          <td>First Name</td>
+          <td>{{confirmation.firstName}}</td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td>{{confirmation.lastName}}</td>
+        </tr>
+        <tr>
+          <td>NPI Number</td>
+          <td>{{confirmation.npiNumber}}</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>{{confirmation.email}}</td>
+        </tr>
+        <tr>
+          <td>Telephone</td>
+          <td>{{confirmation.telephone}}</td>
+        </tr>
+        <tr>
+          <td>Business Address</td>
+          <td>{{confirmation.address}}</td>
+        </tr>
+        <tr>
+          <td>Adress 2</td>
+          <td>{{confirmation.addres2}}</td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td>{{confirmation.city}}</td>
+        </tr><tr>
+          <td>State</td>
+          <td>{{confirmation.state}}</td>
+        </tr><tr>
+          <td>Zip</td>
+          <td>{{confirmation.zip}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+      </table>
+      <button mat-stroked-button class="btn-block"  (click)= "goBack()"> Go Back</button>
+    </mat-card-content>
+  </mat-card>
+</div>
